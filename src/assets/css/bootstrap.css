@@ -3954,7 +3954,7 @@ input[type="button"].btn-block {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-.custom-select:focus::-ms-value {
+.custom-select:focus:-ms-value {
   color: #495057;
   background-color: #fff;
 }
