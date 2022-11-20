@@ -82,7 +82,7 @@
 .page-home::before {
   content: '';
   position: absolute;
-  top: 100;
+  /* top: 100; */
   left: 0;
   width: 50%;
   height: 30%;
@@ -91,7 +91,7 @@
 }
 
 .page-home .navbar {
-  position: relaive;
+  /* position: relaive; */
   top: auto;
   left: 0;
   width: 100%;
