@@ -1,0 +1,7 @@
+{           
+    "nombre":"Diego",
+    "apellido":"Taboada",
+    "titulo": "Analista de Sistemas",
+    "fotoPerfil":"http://localhost:4200/assets/Imagenes/profile-pic(1).png", 
+    "fotoBackGround":"http://localhost:4200/assets/Imagenes/bg_banner.jpg"          
+}

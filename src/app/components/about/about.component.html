@@ -1,13 +1,13 @@
 
 <div class="dj-banner" >
     
-    <div class="dj-bg"style="background-image: url('/assets/Imagenes/bg_banner.jpg')">
+    <div class="dj-bg" style="background-image: url('/assets/Imagenes/bg_banner.jpg')">
         
-        <img src="../assets/Imagenes/profile-pic(1).png" alt="" height="250px" >
+        <img [src]="misDatos.fotoPerfil" alt="" height="250px" >
         
         <div class="dj-text">
-            <h1 class="fw-light mb-4"><b>Diego, Taboada</b></h1>
-            <p>Analista de Sistemas & Full Stack Developer</p>            
+            <h1 class="fw-light mb-4"><b>{{misDatos.nombre}}, {{misDatos.apellido}}</b></h1>
+            <p>{{misDatos.titulo}}</p>            
         </div>
     </div>           
 </div>

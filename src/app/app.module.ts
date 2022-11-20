@@ -10,6 +10,11 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,10 +23,11 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
     ExperienciaComponent,
     EducacionComponent,
     SkillsComponent,
-    ProyectosComponent
+    ProyectosComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot([
       
       {path:'about',component:AboutComponent},
