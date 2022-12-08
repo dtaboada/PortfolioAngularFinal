@@ -1,7 +1,8 @@
 {           
-    "nombre":"Diego",
+    "nombre":"Nico",
     "apellido":"Taboada",
-    "titulo": "Analista de Sistemas",
+    "titulo": "Full stack Developer",
+    "acerca": "Hola!!! Gracias por visitar mi portfolio. Te cuento un poco sobre mi, soy organizado, me gusta trabajar en en equipo y el buen clima interpersonal en el ambito laboral. Disfruto de transmitir mis conocimientos y experiencias para aportar al crecimiento grupal. Me gusta capacitarme para la incorporación de nuevas herramientas y los nuevos desafios",
     "fotoPerfil":"http://localhost:4200/assets/Imagenes/profile-pic(1).png", 
     "fotoBackGround":"http://localhost:4200/assets/Imagenes/bg_banner.jpg"          
 }
