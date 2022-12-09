@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { persona } from 'src/app/model/persona.model';
+import { PersonaService } from 'src/app/service/persona.service';
+//import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 
 @Component({
@@ -7,16 +9,16 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements OnInit {
-  misDatos:any;
 
-  constructor( private portfolioService: PortfolioService) { }
+export class AboutComponent implements OnInit {
+  per: persona =new persona("","","","","","","","");
+
+  constructor(public personaService: PersonaService) { }
 
   ngOnInit(): void {
-    this.portfolioService.obtenerDatos().subscribe(data=>{console.log(data),
-    this.misDatos=data;
-    });
-    
+     this.personaService.getPersona().subscribe(data=>{this.per=data, console.log(this.per)})
+       
   }
+ 
 
 }
