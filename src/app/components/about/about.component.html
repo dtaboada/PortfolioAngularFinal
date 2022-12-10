@@ -1,21 +1,18 @@
 
 <div class="dj-banner" >
     
-    <div class="dj-bg" style="background-image: url('/assets/Imagenes/bg_banner.jpg')">
+    <div class="dj-bg" style="background-image: url({{p[0].banner}})">
         <div >
             <button class="btn btn-outline-success" style="margin-top: 10px; margin-left: 10px;">Edit Banner <i class="bi bi-pen-fill"></i></button>
         </div>
-        
-            <img src="/assets/Imagenes/profile-pic(1).png" alt="" height="250px">  
-
+        <img src="{{p[0].foto}}" alt="" height="250px">
+           
         <div class="dj-text">
-            <h1 class="fw-light mb-4"><b>aca Nombre {{per.nombre}} y Apellido:</b></h1>
-            <p>aca titulo: {{per.titulo}} </p>
+            <h1 class="fw-light mb-4"><b>{{p[0].nombre}}, {{p[0].apellido}}:</b></h1>
+            <p>{{p[0].titulo}}</p>
                         <button class="btn btn-outline-success">Edit Nombre y Titulo <i class="bi bi-pen-fill"></i></button>           
         </div>
-
-     </div>  
-                
+     </div>                  
 </div>
 
 <div class="dj-text" style="text-align-last: right; margin-top:-25px; margin-right:150px ;">
@@ -26,19 +23,14 @@
 <div class="col-lg-12 wow fadeInLeft">
     <h1 class="fw-light mb-4"> <b name="nombre"></b></h1>
     <h5 class="fg-theme mb-3" name="titulo"></h5>
-    <p class="text-muted" name="acercade">aca acerca de:{{per.acerca}} </p>
-  </div>
+    <p class="text-muted" name="acercade">{{p[0].acerca}}</p>
+</div>
 
 
 <div>
     <p>
         <button class="btn btn-outline-success" tyle="margin-top: 10px; margin-left: 10px;">Edit Acerca de <i class="bi bi-pen-fill"></i></button>
     </p>
-    <!-- <p >
-        <button class="btn btn-outline-success">Edit Nombre y Titulo <i class="bi bi-pen-fill"></i></button>
-        <button class="btn btn-outline-success">Edit Banner <i class="bi bi-pen-fill"></i></button>
-        <button class="btn btn-outline-success">Edit Foto <i class="bi bi-pen-fill"></i></button>
-        <button class="btn btn-outline-success">Edit Acerca de <i class="bi bi-pen-fill"></i></button>
-    </p> -->
 </div>  
+
 

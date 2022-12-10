@@ -11,12 +11,14 @@ import { PersonaService } from 'src/app/service/persona.service';
 })
 
 export class AboutComponent implements OnInit {
-  per: persona =new persona("","","","","","","","");
+  //personas: persona =new persona("","","","","","","","");
+  p: persona[] = [];
 
+ 
   constructor(public personaService: PersonaService) { }
 
   ngOnInit(): void {
-     this.personaService.getPersona().subscribe(data=>{this.per=data, console.log(this.per)})
+     this.personaService.getPersona().subscribe(data=>{this.p=data, console.log(this.p)})
        
   }
  
