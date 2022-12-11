@@ -4,18 +4,34 @@
           <div class="col-md-12 wow fadeInRight">
             <h2 class="fw-normal">Educación </h2>
             <div><div class="badge badge-subheadg"> + </div></div>
-            <ul class="timeline mt-4 pr-md-5">
-              <li>
-                <div class="title">2010</div>
-                <div class="text-center wow fadeInUp">
-                    <div class="badge badge-subhead">X</div>
-                    <div class="badge badge-subheadg"><i class="bi bi-pen-fill"></i></div>
-                  </div>
-                <div class="details">
-                  <h5>Specialize of course</h5>
-                  <small class="fg-theme">University of Study</small>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered</p>
-                </div>
-              </li>
-            </ul>
+            
+
+            <div class="col lg 1"></div>
+            <div class="col-lg-11">
+                <table class="table">
+                    <tbody>
+                        <tr *ngFor="let educ of educacion">
+                            
+                          <ul class="timeline mt-4 pr-md-5">
+                            <li>
+                              <div class="title">{{educ.anioInicio}} - {{educ.anioFin}}</div>
+                              <div class="text-center wow fadeInUp">
+                                  <div class="badge badge-subhead">X</div>
+                                  <div class="badge badge-subheadg"><i class="bi bi-pen-fill"></i></div>
+                                </div>
+                              <div class="details">
+                                <h5>{{educ.titulo}}</h5>
+                                <small class="fg-theme">{{educacion[0].institucion}}</small>
+                                <p>{{educ.descripcion}}</p>
+                              </div>
+                            </li>
+                          </ul>
+                                                  
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
     </div>
+  
