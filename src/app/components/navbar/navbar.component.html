@@ -25,10 +25,14 @@
         </li>
       </ul>
       <form  role="login">
-       <a href="https://www.Google.com" target="_blank" ><img src="../assets/Imagenes/git1.png"  ></a> 
+        <a href="https://www.Google.com" target="_blank" ><img src="../assets/Imagenes/git1.png"  ></a> 
         <a href="https://www.flickr.com" target="_blank" > <img src="../assets/Imagenes/in1.png" ></a>
-        <button class="btn btn-outline-success" type="submit">Login</button>
       </form>
+      <!-- <a  href="/login" target="_parent"> <button class="btn btn-outline-success" type="submit">Login</button> </a> -->
+         
+      <button type="button" class="btn btn-outline-success" (click)="login()" *ngIf="!isLogged">LogIn</button>
+      <button type="button" class="btn btn-outline-warning" (click)="onLogOut()" *ngIf="isLogged">LogOut</button>
+   
     </div>
   </div>
 </nav> 

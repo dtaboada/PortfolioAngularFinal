@@ -1,16 +1,16 @@
 
 export class experiencia{
     id?: Number;
-    puesto: String;
-    empresa: String;
-    anioInicio: String;
-    anioFin: String;
-    descripcion: String;
-    logo: String;
+    puesto: string;
+    empresa: string;
+    anioInicio: string;
+    anioFin: string;
+    descripcion: string;
+    logo: string;
      
 
 
-constructor( puesto: String, empresa: String, anioInicio: String, anioFin: String, descripcion: String,logo:String){
+constructor( puesto: string, empresa: string, anioInicio: string, anioFin: string, descripcion: string,logo:string){
           
             this.puesto=puesto;
             this.empresa=empresa;

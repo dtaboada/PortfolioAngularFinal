@@ -1,10 +1,10 @@
-
+<app-navbar></app-navbar>  
 <div class="theme-red"> 
   <div class="container pt-5">
       <div class="row">
         <div class="col-md-12 wow fadeInRight">
           <h2 class="fw-normal">Experiencia </h2>
-          <div><div class="badge badge-subheadg"> + </div></div>
+          <div><button class="badge badge-subheadg" routerLink="/nuevaexperiencia"> + </button></div>
          
                       
 
@@ -22,8 +22,8 @@
                                   <div class="badge badge-subheadg"><i class="bi bi-pen-fill"></i></div>
                                 </div>
                               <div class="details">
-                                <h5>{{expe.puesto}}}</h5>
-                                <small class="fg-theme">{{expe.empresa}}}</small>
+                                <h5>{{expe.puesto}}</h5>
+                                <small class="fg-theme">{{expe.empresa}}</small>
                                 <p>{{expe.descripcion}}</p>
                               </div>
                             </li>
