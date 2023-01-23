@@ -1,4 +1,54 @@
+
 <app-navbar></app-navbar>  
+<div class="theme-red"> 
+  <div class="container pt-5">
+      <div class="row">
+        <div class="col-md-12 wow fadeInRight">
+          <h2 class="fw-normal">Educacion </h2>
+          <div *ngIf="isLogged"><button class="badge badge-subheadg" routerLink="/nuevaeducacion"> Nueva Educacion </button></div>
+         
+                      
+
+          <div class="col lg 1"></div>
+            <div class="col-lg-11">
+                <table class="table">
+                    <tbody>
+                        <tr *ngFor="let educ of educacion">
+                            
+                          <ul class="timeline mt-4 pr-md-5">
+                            <li>
+                              <div class="title">{{educ.anioInicio}} - {{educ.anioFin}}</div>
+                              
+                              
+                              <div class="text-center wow fadeInUp" *ngIf="isLogged">
+                                  <button class="badge badge-subhead" (click)="delete(educ.id)">Eliminar</button>
+                                  <button class="badge badge-subheadg" routerLink="/editareducacion/{{educ.id}}">Editar</button>
+                              </div>
+                              
+                                
+                              <div class="details" display="flex" >
+                                <img src="{{educ.logo}}" alt="un logo" width="50px"  align="right">
+                                <h5>{{educ.titulo}}</h5> 
+                                <small class="fg-theme">{{educ.institucion}}</small>
+                                <p>{{educ.descripcion}}</p>
+                              </div>
+                              
+                             
+
+
+                            </li>
+                          </ul>
+                                                  
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          
+  </div>
+
+
+
+<!-- <app-navbar></app-navbar>  
 <div class="theme-red"> 
     <div class="container pt-5">
         <div class="row">
@@ -16,10 +66,13 @@
                           <ul class="timeline mt-4 pr-md-5">
                             <li>
                               <div class="title">{{educ.anioInicio}} - {{educ.anioFin}}</div>
-                              <div class="text-center wow fadeInUp">
-                                  <div class="badge badge-subhead">X</div>
-                                  <div class="badge badge-subheadg"><i class="bi bi-pen-fill"></i></div>
-                                </div>
+
+                              <div class="text-center wow fadeInUp" *ngIf="isLogged">
+                                <button class="badge badge-subhead" (click)="delete(educacion.id)">Eliminar</button>
+                                <button class="badge badge-subheadg" routerLink="/editareducacion/{{educacion.id}}">Editar</button>
+                              </div>
+                            
+                                
                               <div class="details">
                                 <h5>{{educ.titulo}}</h5>
                                 <small class="fg-theme">{{educacion[0].institucion}}</small>
@@ -34,5 +87,5 @@
             </div>
 
 
-    </div>
+    </div> -->
   

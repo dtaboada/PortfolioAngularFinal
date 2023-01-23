@@ -1,6 +1,6 @@
 
 export class proyecto{
-    id?: Number;
+    id?: number;
     titulo: String;
     anio: String;
     descripcion: String;

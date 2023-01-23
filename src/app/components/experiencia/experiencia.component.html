@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-12 wow fadeInRight">
           <h2 class="fw-normal">Experiencia </h2>
-          <div><button class="badge badge-subheadg" routerLink="/nuevaexperiencia"> + </button></div>
+          <div *ngIf="isLogged"><button class="btn btn-outline-success" routerLink="/nuevaexperiencia"> Nueva Experiencia </button></div>
          
                       
 
@@ -17,15 +17,24 @@
                           <ul class="timeline mt-4 pr-md-5">
                             <li>
                               <div class="title">{{expe.anioInicio}} - {{expe.anioFin}}</div>
-                              <div class="text-center wow fadeInUp">
-                                  <div class="badge badge-subhead">X</div>
-                                  <div class="badge badge-subheadg"><i class="bi bi-pen-fill"></i></div>
-                                </div>
-                              <div class="details">
-                                <h5>{{expe.puesto}}</h5>
+                              
+                              
+                              <div class="text-center wow fadeInUp" *ngIf="isLogged">
+                                  <button class="btn btn-outline-danger" style="margin-right: 10px;" (click)="delete(expe.id)">Eliminar</button>
+                                  <button class="btn btn-outline-success" routerLink="/editarexperiencia/{{expe.id}}">Editar</button>
+                              </div>
+                              
+                                
+                              <div class="details" display="flex" >
+                                <img src="{{expe.logo}}" alt="un logo" width="50px"  align="right">
+                                <h5>{{expe.puesto}}</h5> 
                                 <small class="fg-theme">{{expe.empresa}}</small>
                                 <p>{{expe.descripcion}}</p>
                               </div>
+                              
+                             
+
+
                             </li>
                           </ul>
                                                   

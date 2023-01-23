@@ -1,20 +1,20 @@
 
 export class educacion{
-    id?: Number;
+ 
+    id?: number;
     titulo: String;
     institucion: String;
     anioInicio: String;
     anioFin: String;
     descripcion: String;
-    logo: String;
+    logo: any;
      
 
 
-constructor( nombre: String, titulo: String, institucion: String, anioInicio: String, anioFin: String, descripcion: String,logo:String){
+constructor( titulo: String, institucion: String, anioInicio: String, anioFin: String, descripcion: String,logo:any){
           
             this.titulo=titulo;
             this.institucion=institucion;
-            this.titulo=titulo;
             this.anioInicio=anioInicio;
             this.anioFin=anioFin;
             this.descripcion=descripcion;

@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <h2 class="fw-normal">Nuevo Proyecto </h2> 
+    <div class="row>">
+        <div>
+            <form (ngSubmit)="onCreate()"noValidate #f="ngForm">
+                <div class="form-group"> 
+                    <label for="nombre">Nombre del Proyecto</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="titulo" required>
+                </div>
+                
+                <div class="form-group"> 
+                    <label for="Empresa">Año</label>
+                    <input type="text" class="form-control" id="anio" name="anio" [(ngModel)]="anio" required>
+                </div> 
+
+                <div class="form-group"> 
+                    <label for="descripcion">Descripcion</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" required>
+                </div> 
+
+                <div class="form-group"> 
+                    <label for="link">Pagina Web</label>
+                    <input type="text" class="form-control" id="link" name="link" [(ngModel)]="link" required>
+                </div>              
+                <br>
+                <button class="btn btn-primary"> Agregar</button>
+                
+            </form>
+        </div>
+    </div>
+</div>

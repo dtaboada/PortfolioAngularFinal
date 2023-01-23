@@ -4,22 +4,22 @@
         <div class="row">
           <div class="col-md-12 wow fadeInRight">
             <h2 class="fw-normal">Proyectos </h2>
-            <div><div class="badge badge-subheadg"> + </div></div>
+            <div *ngIf="isLogged"><button class="badge badge-subheadg" routerLink="/nuevoproyecto"> Nuevo Proyecto </button></div>
             
 
             <div class="col lg 1"></div>
             <div class="col-lg-11">
                 <table class="table">
                     <tbody>
-                        <tr *ngFor="let p of proyect">
+                        <tr *ngFor="let p of proyecto">
                             
                           <ul class="timeline mt-4 pr-md-5">
                             <li>
                               <div class="title">{{p.anio}}</div>
-                              <div class="text-center wow fadeInUp">
-                                  <div class="badge badge-subhead">X</div>
-                                  <div class="badge badge-subheadg"><i class="bi bi-pen-fill"></i></div>
-                                </div>
+                                <div class="text-center wow fadeInUp"  *ngIf="isLogged">                          
+                                    <button class="badge badge-subhead" (click)="delete(p.id)">Eliminar</button>
+                                    <button class="badge badge-subheadg" routerLink="/editarproyecto/{{p.id}}">Editar</button>
+                                </div> 
                               <div class="details">
                                 <h5>{{p.titulo}}</h5>
                                 <small class="fg-theme">{{p.link}}</small>

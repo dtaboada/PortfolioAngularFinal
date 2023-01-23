@@ -5,24 +5,51 @@
       <div class="col-md-12">
         <div class="px-lg-3">
           <h4 class="wow fadeInUp">Skills</h4>
-          <div><div class="badge badge-subheadg"> + </div></div>
+
+          <div *ngIf="isLogged"><br><button (click)="onCreate()" class="badge badge-subheadg"> nuevo skill </button></div>
 
           <div class="col lg 2"></div>
           <div class="col-lg-11">
               <table class="table">
                   <tbody>
-                      <tr *ngFor="let skill of skill">
+                      <tr *ngFor="let skill of skills">
                          <div class="progress-wrapper wow fadeInUp">
                             <span class="caption">{{skill.descripcion}} </span>
                               <div class="progress">
                                 <div class="progress-bar" role="progressbar" [ngStyle]="{'width.%':skill.porcentaje}" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{{skill.porcentaje}}%</div>
                               </div>    
-                          
-                              <div class="wow fadeInUp theme-red" style="margin-top: 10px ;">
-                                <div class="badge badge-subhead">X</div>
-                                <div class="badge badge-subheadg"><i class="bi bi-pen-fill"></i></div>
+                              
+                              <br>
+                              <div *ngIf="isLogged">
+                                <table class="table" class="wow fadeInUp theme-red">
+                                  <tr >
+                                   
+                                      <td width="30%">
+                                        <span class="caption">Editar nombre:     </span> 
+                                        <input type="text"  id="descripcion" name="descripcion" [(ngModel)]="skill.descripcion" required>
+                                      </td>
+                                      <td width="30%"> 
+                                        <span class="caption">    Editar Porcentaje: </span>
+                                        <input type="number" min="0" max="100"  id="porcentaje" name="porcentaje" [(ngModel)]="skill.porcentaje" required>
+                                      </td>
+                                      <td width="15%">
+                                        <button class="badge badge-subheadg" (click)="onUpdate(skill)"> Guardar Cambios</button>
+                                      </td>
+                                      <td width="15%">
+                                        <button class="badge badge-subhead" (click)="delete(skill.id)" >Eliminar Skill</button>
+                                      </td>
+                                  </tr>
+
+                                </table>
+                                
+                                
+                                <div class="wow fadeInUp theme-red"  >
+                                  
+                                 
                               </div>
-                        
+                              </div>
+
+                                                    
                         </div>                         
                       </tr>
                     </tbody>

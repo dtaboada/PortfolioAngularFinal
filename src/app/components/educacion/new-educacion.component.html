@@ -1,18 +1,18 @@
-<app-navbar></app-navbar>  
+<app-navbar></app-navbar>
 
 <div class="container">
-     
+    <h2 class="fw-normal">Nueva Educacion </h2> 
     <div class="row>">
         <div>
             <form (ngSubmit)="onCreate()"noValidate #f="ngForm">
                 <div class="form-group"> 
-                    <label for="puesto">Puesto</label>
-                    <input type="text" class="form-control" id="puesto" name="puesto" [(ngModel)]="puesto" required>
+                    <label for="puesto">Titulo</label>
+                    <input type="text" class="form-control" id="puesto" name="puesto" [(ngModel)]="titulo" required>
                 </div>
                 
                 <div class="form-group"> 
-                    <label for="Empresa">Empresa</label>
-                    <input type="text" class="form-control" id="Empresa" name="Empresa" [(ngModel)]="empresa" required>
+                    <label for="Empresa">Institucion</label>
+                    <input type="text" class="form-control" id="Empresa" name="Empresa" [(ngModel)]="institucion" required>
                 </div> 
 
                 <div class="form-group"> 
@@ -32,7 +32,7 @@
 
                 <div class="form-group"> 
                     <label for="logo">Logo</label>
-                    <input type="file" (change)="file($event)"  Class="form-control" id="logo" name="logo" [(ngModel)]="logo" required>
+                    <input type="file" (change)="file($event)" accept=".jpg,.jpeg,.png" Class="form-control" id="logo" name="logo" [(ngModel)]="logo" required>
                     <br>     
                 </div> 
 
@@ -42,7 +42,7 @@
 
                 <br>
                 <button class="btn btn-primary"> Agregar</button>
-
+                
             </form>
         </div>
     </div>

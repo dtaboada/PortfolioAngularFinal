@@ -15,7 +15,9 @@ export class NewExperienciaComponent implements OnInit {
     anioInicio: string = '';
     anioFin: string = '';
     descripcion: string = '';
-    logo: string = '';
+    logo: any = '';
+    prev: any ='';
+    imgPerv= false;
 
   constructor(private sExpe : ExperienciaService, private router: Router) { }
 
@@ -27,7 +29,7 @@ export class NewExperienciaComponent implements OnInit {
      this.sExpe.save(expe).subscribe(
        data => {
          alert("Experiencia añadida");
-         //this.router.navigate(['']);
+         this.router.navigate(['/experiencia']);
          console.log(data)
        }, err => {
          alert("Falló")
@@ -36,15 +38,36 @@ export class NewExperienciaComponent implements OnInit {
        }
     )
    }
-}
-//   onCreate():void{
-//      const expe = new experiencia(this.puesto, this.empresa, this.anioInicio, this.anioFin, this.descripcion,this.logo);
-//      this.sExpe.save(expe).subscribe( {
-//       next: (v) => console.log(v) ,
-//       error: (e) => console.error(e),
-//      complete: () => console.info('complete') 
-     
-//    })
 
-// }
+   file(event:any) {
+
+    let file= event.target.files[0];
+    let reader= new FileReader();
+  
+    reader.readAsDataURL(file);
+    reader.onload=()=>{
+        //aqui ya esta en base64
+        let x =reader.result;
+
+        if (file.size > 500000) {
+          const tamanioEnMb = 500000 / 10000;
+          alert(`El tamaño máximo es ${tamanioEnMb} KB`);
+          // Limpiar
+          this.imgPerv= false;
+          this.prev="";     
+        } 
+        else {
+          this.imgPerv= true;  
+          this.prev=x;
+          this.logo=x;
+        }
+       
+        console.log(x);
+      
+   }
+   
+   
+  }
+  
+}
 

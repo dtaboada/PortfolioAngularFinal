@@ -30,8 +30,9 @@ export class ExperienciaService {
   public delete(id : number): Observable<any>{
     return this.http.delete<any> (this.URL+`borrar/${id}`);
 
+  } 
+    public detalle(id: number): Observable<experiencia>{
+      return this.http.get<experiencia>(this.URL + `detalle/${id}`);
+  } 
+
   }
-
-}
-
-
