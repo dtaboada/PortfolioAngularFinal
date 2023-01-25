@@ -1,7 +1,7 @@
-<app-navbar></app-navbar>  
-<div class="dj-banner" >
+
+<div class="dj-banner" id="about">
     
-    <div class="dj-bg" style="background-image: url({{p[0].banner}})">
+    <div class="dj-bg" style="background-image: url({{p[0].banner}});" >
         
         <div *ngIf="isLogged">
             <button class="btn btn-outline-success" style="margin-top: 10px; margin-left: 10px;" (click)="editBanner()" *ngIf="editaBanner">Edit Banner</button>
@@ -51,7 +51,7 @@
 
 
 <div class="col-lg-12 wow fadeInLeft" *ngIf="!editAcerca">
-    <p class="text-muted" name="acercade" align="center">{{p[0].acerca}}</p>
+    <p class="text-muted" name="acercade" align="center" style=" margin-left: 25px; margin-right: 25px;" >{{p[0].acerca}}</p>
 </div>
 
 <div *ngIf="editAcerca" align="center">

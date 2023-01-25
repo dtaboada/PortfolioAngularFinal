@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { experiencia } from 'src/app/model/experiencia';
 import { ExperienciaService } from 'src/app/service/experiencia.service';
 import { TokenService } from 'src/app/service/token.service';
@@ -16,7 +17,8 @@ export class ExperienciaComponent implements OnInit {
   experiencia: experiencia[] = [];
   isLogged = false;
 
-  constructor(public experienciaService: ExperienciaService,private tokenService: TokenService) { }
+  constructor(public experienciaService: ExperienciaService,private tokenService: TokenService,
+    private router: Router ) { }
 
   ngOnInit(): void {
     this.cargarExperiencia();
@@ -37,6 +39,9 @@ export class ExperienciaComponent implements OnInit {
       this.experienciaService.delete(id).subscribe(
         data => {
           alert("experiencia Borrada")
+          //this.cargarExperiencia();
+          //window.location.reload();
+          //this.router.navigate(['/home']);
           this.cargarExperiencia();
         }, err => {
           alert("No se pudo borrar la experiencia");

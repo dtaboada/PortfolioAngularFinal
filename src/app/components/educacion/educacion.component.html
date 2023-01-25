@@ -1,11 +1,10 @@
-
-<app-navbar></app-navbar>  
+<!-- <app-navbar></app-navbar>   -->
 <div class="theme-red"> 
   <div class="container pt-5">
       <div class="row">
         <div class="col-md-12 wow fadeInRight">
-          <h2 class="fw-normal">Educacion </h2>
-          <div *ngIf="isLogged"><button class="badge badge-subheadg" routerLink="/nuevaeducacion"> Nueva Educacion </button></div>
+          <h2 class="fw-normal" id="educacion" style="padding-top: 80px">Educacion </h2>
+          <div *ngIf="isLogged"><button class="btn btn-outline-success" routerLink="/nuevaeducacion"> Nueva Educacion </button></div>
          
                       
 
@@ -21,8 +20,8 @@
                               
                               
                               <div class="text-center wow fadeInUp" *ngIf="isLogged">
-                                  <button class="badge badge-subhead" (click)="delete(educ.id)">Eliminar</button>
-                                  <button class="badge badge-subheadg" routerLink="/editareducacion/{{educ.id}}">Editar</button>
+                                  <button class="btn btn-outline-danger"  style="margin-right: 10px" (click)="delete(educ.id)">Eliminar</button>
+                                  <button class="btn btn-outline-success" routerLink="/editareducacion/{{educ.id}}">Editar</button>
                               </div>
                               
                                 

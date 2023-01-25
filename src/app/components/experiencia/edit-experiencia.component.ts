@@ -36,13 +36,13 @@ export class EditExperienciaComponent implements OnInit {
     this.sExperiencia.update(id, this.expLab).subscribe(
       data => {
         alert("Experiencia Modificada Correctamente");
-        this.router.navigate(['/experiencia']);
+        this.router.navigate(['/home']);
         console.log(data);
       }, err =>{
         alert("Error al Modificar Experiencia"); 
         //console.log(this.expLab);
         console.log(err);
-        this.router.navigate(['/experiencia']);
+        //this.router.navigate(['/home']);
       }
     )
   }

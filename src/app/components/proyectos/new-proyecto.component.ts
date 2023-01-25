@@ -27,7 +27,7 @@ export class NewProyectoComponent implements OnInit {
     this.sProyect.save(proyect).subscribe(
       data => {
         alert("Proyecto añadido");
-        this.router.navigate(['/proyectos']);
+        this.router.navigate(['/home']);
         console.log(data)
       }, err => {
         alert("Falló")

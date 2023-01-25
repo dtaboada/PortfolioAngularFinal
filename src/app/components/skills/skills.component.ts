@@ -39,12 +39,12 @@ export class SkillsComponent implements OnInit {
     this.skillService.update(this.skill).subscribe(
       data => {
         alert("Experiencia Modificada Correctamente");
-        this.router.navigate(['/skills']);
+        //this.router.navigate(['/skills']);
         console.log(data);
       }, err =>{
         alert("Error al Modificar Educacion"); 
         console.log(err);
-        this.router.navigate(['/skills']);
+        this.router.navigate(['/home']);
       }
     )
   }
@@ -53,7 +53,7 @@ export class SkillsComponent implements OnInit {
     if(id != undefined){
       this.skillService.delete(id).subscribe(
         data => {
-          alert("Educacion Borrada")
+          alert("Skill Borrado")
           this.cargarSkill();
         }, err => {
           alert("No se pudo borrar la Educacion");
@@ -69,7 +69,7 @@ export class SkillsComponent implements OnInit {
       data => {
         alert("Skill Nuevo Creado");
         window.location.reload();
-        console.log(data)        
+        //console.log(data)        
       }, err => {
         alert("No se pudo agregar el Skill")
         console.log(err);

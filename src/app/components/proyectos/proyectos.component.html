@@ -1,10 +1,10 @@
-<app-navbar></app-navbar>  
+<!-- <app-navbar></app-navbar>   -->
 <div class="theme-red"> 
     <div class="container pt-5">
         <div class="row">
           <div class="col-md-12 wow fadeInRight">
-            <h2 class="fw-normal">Proyectos </h2>
-            <div *ngIf="isLogged"><button class="badge badge-subheadg" routerLink="/nuevoproyecto"> Nuevo Proyecto </button></div>
+            <h2 class="fw-normal" id="proyectos" style="padding-top: 80px;">Proyectos </h2>
+            <div *ngIf="isLogged"><button class="btn btn-outline-success" routerLink="/nuevoproyecto"> Nuevo Proyecto </button></div>
             
 
             <div class="col lg 1"></div>
@@ -17,8 +17,8 @@
                             <li>
                               <div class="title">{{p.anio}}</div>
                                 <div class="text-center wow fadeInUp"  *ngIf="isLogged">                          
-                                    <button class="badge badge-subhead" (click)="delete(p.id)">Eliminar</button>
-                                    <button class="badge badge-subheadg" routerLink="/editarproyecto/{{p.id}}">Editar</button>
+                                    <button class="btn btn-outline-danger" style="margin-right: 10px;" (click)="delete(p.id)">Eliminar</button>
+                                    <button class="btn btn-outline-success" routerLink="/editarproyecto/{{p.id}}">Editar</button>
                                 </div> 
                               <div class="details">
                                 <h5>{{p.titulo}}</h5>

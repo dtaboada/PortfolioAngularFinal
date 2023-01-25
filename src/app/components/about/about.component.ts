@@ -153,7 +153,7 @@ export class AboutComponent implements OnInit {
       }, err =>{
         alert("Error al Modificar Foto");
         console.log(err);
-        this.router.navigate(['/about']);
+        this.router.navigate(['/home']);
       }
     )
   }
@@ -169,7 +169,7 @@ export class AboutComponent implements OnInit {
       }, err =>{
         alert("Error al Modificar Banner");
         console.log(err);
-        this.router.navigate(['/about']);
+        this.router.navigate(['/home']);
       }
     )
   }

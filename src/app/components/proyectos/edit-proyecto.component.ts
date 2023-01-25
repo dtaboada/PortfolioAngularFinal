@@ -34,11 +34,10 @@ export class EditProyectoComponent implements OnInit {
       this.sProyecto.update(id, this.proyecto).subscribe(
         data => {
           alert("Proyecto Modificado Correctamente");
-          this.router.navigate(['/proyectos']);
-          console.log(data);
+          this.router.navigate(['/home']);
+          //console.log(data);
         }, err =>{
           alert("Error al Modificar Proyecto"); 
-          //console.log(this.expLab);
           console.log(err);
           //this.router.navigate(['/proyecto']);
         }

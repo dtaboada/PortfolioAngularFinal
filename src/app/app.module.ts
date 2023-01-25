@@ -19,6 +19,8 @@ import { EditEducacionComponent } from './components/educacion/edit-educacion.co
 import { NewEducacionComponent } from './components/educacion/new-educacion.component';
 import { NewProyectoComponent } from './components/proyectos/new-proyecto.component';
 import { EditProyectoComponent } from './components/proyectos/edit-proyecto.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -38,6 +40,8 @@ import { EditProyectoComponent } from './components/proyectos/edit-proyecto.comp
     NewEducacionComponent,
     NewProyectoComponent,
     EditProyectoComponent,
+    FooterComponent,
+    HomeComponent,
   ],
   
   imports: [
@@ -45,6 +49,8 @@ import { EditProyectoComponent } from './components/proyectos/edit-proyecto.comp
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
+
+      {path:'home',component:HomeComponent},
       
       {path:'about',component:AboutComponent},
       {path: 'login',component: LoginComponent},
@@ -63,9 +69,7 @@ import { EditProyectoComponent } from './components/proyectos/edit-proyecto.comp
      
       {path:'skills',component: SkillsComponent},
      
-     
-      
-      {path:'**',component:AboutComponent}
+      {path:'**',component:HomeComponent}
   ])
 
      
