@@ -35,7 +35,7 @@ export class EditEducacionComponent implements OnInit {
     const id = this.activatedRouter.snapshot.params['id'];
     this.sEducacion.update(id, this.educacion).subscribe(
       data => {
-        alert("Experiencia Modificada Correctamente");
+        alert("Educación Modificada Correctamente");
         this.router.navigate(['/home']);
         console.log(data);
       }, err =>{
