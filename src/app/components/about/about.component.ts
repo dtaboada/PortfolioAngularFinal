@@ -137,7 +137,7 @@ export class AboutComponent implements OnInit {
       }, err =>{
         alert("Error al Modificar Datos");
         console.log(err);
-        this.router.navigate(['/about']);
+        this.router.navigate(['/#about']);
       }
     )
   }
